@@ -1,0 +1,53 @@
+---
+import NavigationItem from "./NavigationItem.astro";
+---
+
+<header id="navigation" class="p-navigation is-dark">
+  <div class="l-full-width">
+    <div class="l-start">
+      <div class="p-navigation__banner">
+        <div class="p-navigation__tagged-logo">
+          <a class="p-navigation__link" href="/">
+            <div class="p-navigation__logo-tag">
+              <img
+                class="p-navigation__logo-icon"
+                src="https://assets.ubuntu.com/v1/82818827-CoF_white.svg"
+                alt=""
+              />
+            </div>
+            <span class="p-navigation__logo-title">Design</span>
+          </a>
+        </div>
+        <a href="#navigation" class="p-navigation__toggle--open" title="menu"
+          >Menu</a
+        >
+        <a
+          href="#navigation-closed"
+          class="p-navigation__toggle--close"
+          title="close menu">Close menu</a
+        >
+      </div>
+    </div>
+    <div class="l-main">
+      <div class="p-navigation__row u-fixed-width">
+        <nav class="p-navigation__nav">
+          <ul class="p-navigation__items">
+            <NavigationItem title="Brand" />
+            <NavigationItem title="Font" />
+            <NavigationItem title="Vanilla" />
+            <NavigationItem title="Accessibility" />
+            <NavigationItem title="Resources" />
+            <NavigationItem title="Contribute" />
+          </ul>
+          <ul class="p-navigation__items global-nav"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  import { createNav } from "@canonical/global-nav";
+
+  createNav();
+</script>

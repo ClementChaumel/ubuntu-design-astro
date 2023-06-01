@@ -1,0 +1,20 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const href = `/${title.toLocaleLowerCase()}`;
+const { pathname } = Astro.url;
+---
+
+<li
+  class:list={[
+    "p-navigation__item",
+    {
+      "is-selected": pathname.startsWith(href),
+    },
+  ]}
+>
+  <a class="p-navigation__link" href={href}>{title}</a>
+</li>
