@@ -1,8 +1,8 @@
 ---
 export interface Props {
   title: string;
-  url: string;
-  img: string;
+  url?: string;
+  img?: string;
   imgAlt?: string;
   extraClasses?: string;
 }
@@ -11,9 +11,9 @@ const { title, url, img, imgAlt, extraClasses } = Astro.props;
 ---
 
 <div class:list={["p-card", extraClasses]}>
-  <img class="p-card__image" src={img} alt={imgAlt || ""} />
+  {img ? <img class="p-card__image" src={img} alt={imgAlt || ""} /> : null}
   <div class="p-card__inner">
-    <h3><a href={url}>{title}</a></h3>
+    <h3>{url ? <a href={url}>{title}</a> : title}</h3>
     <slot />
   </div>
 </div>
