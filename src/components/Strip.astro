@@ -2,9 +2,10 @@
 export interface Props {
   variation?: "light" | "accent";
   isDeep?: boolean;
+  isBordered?: boolean;
 }
 
-const { variation, isDeep } = Astro.props;
+const { variation, isDeep, isBordered } = Astro.props;
 ---
 
 <section
@@ -13,6 +14,7 @@ const { variation, isDeep } = Astro.props;
     `p-strip${variation ? `--${variation}` : ""}`,
     {
       "is-deep": isDeep,
+      "is-bordered": isBordered,
     },
   ]}
 >

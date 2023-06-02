@@ -1,0 +1,358 @@
+---
+import Card from "../../components/Card.astro";
+import ColorCard from "../../components/ColorCard.astro";
+import ColorTint from "../../components/ColorTint.astro";
+import Separator from "../../components/Separator.astro";
+import Strip from "../../components/Strip.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Ubuntu Design">
+  <Strip isBordered>
+    <div class="col-8">
+      <img
+        src="https://assets.ubuntu.com/v1/61956028-ubuntu-colour-pantones.jpg"
+        alt="Ubuntu colour pantones"
+        title="Ubuntu colour pantones"
+        width="540"
+        height="247"
+        srcset="https://assets.ubuntu.com/v1/61956028-ubuntu-colour-pantones.jpg 540w, https://assets.ubuntu.com/v1/cdc130b4-ubuntu-colour-pantones-300x137.jpg 300w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+      <p>
+        Colour is an effective, powerful and instantly recognisable medium for
+        visual communications. To convey the brand personality and brand values,
+        there is a sophisticated colour palette.
+      </p>
+      <p>
+        We have introduced a palette which includes both a fresh, lively orange,
+        and a rich, mature aubergine. The use of aubergine indicates commercial
+        involvement, while orange is a signal of community engagement.
+      </p>
+      <p>
+        These colours are used widely in the brand communications, to convey the
+        precise, reliable and free personality.
+      </p>
+    </div>
+  </Strip>
+
+  <Strip isBordered>
+    <div class="row">
+      <div class="col-8">
+        <h2>Ubuntu core colours</h2>
+        <p>
+          The Ubuntu colour palette has been created to reflect the spirit of
+          our brand. Orange for a community feel. White for a clean, fresh and
+          light feel.
+        </p>
+        <p>
+          Black is used in some versions of the brandmark for flexibility of
+          application and where print restrictions apply. It can also be used
+          for body copy.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <ColorCard
+        name="Ubuntu orange"
+        hex="#E95420"
+        cmyk="C0 M79 Y100 K0"
+        pantone="1665"
+      />
+      <ColorCard name="White" hex="#FFFFFF" cmyk="C0 M0 Y0 K0" />
+      <ColorCard name="Black" hex="#000000" cmyk="C0 M0 Y0 K100" />
+
+      <div class="row">
+        <div class="col-8">
+          <div class="p-notification--information">
+            <p class="p-notification__response">
+              <span class="p-notification__status">Information:</span> Pantone Matching
+              System is a worldwide printing, publishing and packaging language for
+              the selection, marketing and control of colour. PANTONE&reg; is a registered
+              trademark of Pantone Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Strip>
+
+  <Strip isBordered>
+    <div class="row">
+      <div class="col-8">
+        <h2>Supporting colours</h2>
+        <p>
+          In addition, there is a supporting colour palette for when
+          communications have a consumer or enterprise focus.
+        </p>
+        <ul class="p-list--divided">
+          <li class="p-list__item">Light aubergine for a consumer focus</li>
+          <li class="p-list__item">Dark aubergine for an enterprise focus</li>
+          <li class="p-list__item">Mid aubergine for a balance of both</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row u-equal-height">
+      <ColorCard
+        name="Light aubergine"
+        hex="#77216F"
+        cmyk="C0 M79 Y100 K0"
+        pantone="512"
+      />
+      <ColorCard
+        name="Mid aubergine"
+        hex="#5E2750"
+        cmyk="C0 M79 Y100 K0"
+        pantone="511"
+      />
+      <ColorCard
+        name="Dark aubergine"
+        hex="#2C001E"
+        cmyk="C0 M79 Y100 K0"
+        pantone="7449"
+      />
+    </div>
+  </Strip>
+
+  <Strip isBordered>
+    <div class="row">
+      <div class="col-8">
+        <h2>Neutral colours</h2>
+        <h3>Warm grey</h3>
+        <p>
+          For balance. The addition of warm grey softens the combination of
+          orange and aubergine and provides a bridge between the two.
+        </p>
+        <p>
+          Warm grey can be used for; backgrounds, graphics, dot patterns, charts
+          and diagrams. It can also be used for large size text.
+        </p>
+        <h3>Cool grey</h3>
+        <p>
+          For typography, particularly body copy. Black can be quite harsh in
+          combination with aubergine, but grey delivers more balance while still
+          being legible.
+        </p>
+        <p>Cool grey can also be used within charts and diagrams.</p>
+      </div>
+    </div>
+    <div class="row u-equal-height">
+      <ColorCard
+        name="Warm grey"
+        hex="#AEA79F"
+        cmyk="C0 M5 Y10 K29"
+        pantone="Pantone Warm Grey 5"
+      />
+      <ColorCard
+        name="Cool grey"
+        hex="#333333"
+        cmyk="C44 M34 Y22 K78"
+        pantone="Pantone Cool Grey 11"
+      />
+      <ColorCard
+        name="Text grey"
+        hex="#111111"
+        cmyk="C0 M0 Y0 K93"
+        pantone="Pantone Black 2 2X"
+      />
+    </div>
+  </Strip>
+  <Strip isBordered>
+    <div class="col-8">
+      <h2>Canonical core colours</h2>
+      <p>
+        The Canonical colour palette has been created to reflect the spirit of
+        our brand. Aubergine for a smart, focussed feel. White for a clean,
+        fresh and light feel.
+      </p>
+      <div class="row u-equal-height">
+        <ColorCard
+          name="Canonical aubergine"
+          hex="#772953"
+          cmyk="C26 M99 Y12 K52"
+          pantone="683"
+        />
+        <ColorCard name="White" hex="#FFFFFF" cmyk="C0 M0 Y0 K0" />
+      </div>
+    </div>
+  </Strip>
+
+  <Strip isBordered>
+    <div class="row">
+      <div class="col-6">
+        <h2>Tints</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <ColorTint
+        name="Ubuntu orange"
+        tints={[
+          "#E95420",
+          "#EB6536",
+          "#ED764D",
+          "#F08763",
+          "#F29879",
+          "#F4AA90",
+          "#F5B29B",
+          "#F6BBA6",
+          "#F7C3B1",
+          "#F8CCBC",
+          "#FAD4C7",
+          "#FBDDD2",
+          "#FCE5DE",
+          "#FDEEE9",
+        ]}
+      />
+      <ColorTint
+        name="Canonical Aubergine"
+        tints={[
+          "#772953",
+          "#843E64",
+          "#925375",
+          "#9F6986",
+          "#AD7E97",
+          "#BB94A9",
+          "#C19EB1",
+          "#C8A9BA",
+          "#CFB4C2",
+          "#D6BECB",
+          "#DDC9D4",
+          "#E3D4DC",
+          "#EADEE5",
+          "#F1E9ED",
+        ]}
+        nbOfWhiteLabels={3}
+      />
+      <ColorTint
+        name="Light Aubergine"
+        tints={[
+          "#77216F",
+          "#84377D",
+          "#924D8B",
+          "#9F639A",
+          "#AD79A8",
+          "#BB90B7",
+          "#C19BBE",
+          "#C8A6C5",
+          "#CFB1CC",
+          "#D6BCD3",
+          "#DDC7DB",
+          "#E3D2E2",
+          "#EADDE9",
+          "#F1E8F0",
+        ]}
+        nbOfWhiteLabels={3}
+      />
+      <ColorTint
+        name="Mid Aubergine"
+        tints={[
+          "#5E2750",
+          "#6E3C61",
+          "#7E5273",
+          "#8E6784",
+          "#9E7D96",
+          "#AE93A7",
+          "#B69DB0",
+          "#BEA8B9",
+          "#C6B3C1",
+          "#CEBECA",
+          "#D6C9D3",
+          "#DED3DC",
+          "#E6DEE4",
+          "#EEE9ED",
+        ]}
+        nbOfWhiteLabels={4}
+      />
+      <ColorTint
+        name="Dark Aubergine"
+        tints={[
+          "#2C001E",
+          "#411934",
+          "#56334B",
+          "#6B4C61",
+          "#806678",
+          "#957F8E",
+          "#A08C99",
+          "#AA99A5",
+          "#B5A5B0",
+          "#BFB2BB",
+          "#CABFC6",
+          "#D4CCD2",
+          "#DFD8DD",
+          "#E9E5E8",
+        ]}
+        nbOfWhiteLabels={5}
+      />
+      <ColorTint
+        name="Warm Grey"
+        tints={[
+          "#AEA79F",
+          "#B6AFA8",
+          "#BEB8B2",
+          "#C6C1BB",
+          "#CECAC5",
+          "#D6D3CF",
+          "#DAD7D3",
+          "#DEDBD8",
+          "#E2E0DD",
+          "#E6E4E2",
+          "#EAE9E7",
+          "#EEEDEB",
+          "#F2F1F0",
+          "#F6F6F5",
+        ]}
+      />
+
+      <div class="row">
+        <div class="col-8">
+          <p>
+            Tints of the above palette colours can be used as background colours
+            and in charts and diagrams when a clear visual hierarchy of
+            information is needed.
+          </p>
+          <h3>Tint percentages</h3>
+          <p>
+            Use only the percentages shown on this page. Never use a tint less
+            than 10%.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Strip>
+
+  <Strip variation="light">
+    <div class="col-8">
+      <h2>The amount of colour we use</h2>
+      <p>
+        <img
+          src="https://assets.ubuntu.com/v1/13e0eef4-ubuntu-colour-wheel-voice.png"
+          alt="Colour pie chart"
+          title="Colour pie chart"
+          width="540"
+          height="264"
+          srcset="https://assets.ubuntu.com/v1/13e0eef4-ubuntu-colour-wheel-voice.png 540w, https://assets.ubuntu.com/v1/0a0191b4-ubuntu-colour-wheel-voice-300x146.png 300w"
+          sizes="(max-width: 540px) 100vw, 540px"
+        />
+      </p>
+      <p>
+        Our colour palette consists of orange, aubergine, white and warm grey.
+        The amount of colour we use for community and Canonical collateral
+        varies according to the emphasis of the content.
+      </p>
+      <p>
+        At one end of the scale, where the work is dominated by the community,
+        the emphasis is on a fresh palette, the use of white and orange, and
+        warm grey for balance. Aubergine is used only as a highlight.
+      </p>
+      <p>
+        At the other end of the scale, where the work is more focused on
+        Canonical, the palette is more refined and grounded, with much more
+        emphasis on aubergine as the core colour. Orange is only used as a
+        highlight and we use white and warm grey to complement the orange and
+        aubergine.
+      </p>
+    </div>
+  </Strip>
+</Layout>
