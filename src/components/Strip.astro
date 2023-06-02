@@ -1,0 +1,24 @@
+---
+export interface Props {
+  variation?: "light" | "accent";
+  isDeep?: boolean;
+}
+
+const { variation, isDeep } = Astro.props;
+---
+
+<section
+  class:list={[
+    "l-full-width",
+    `p-strip${variation ? `--${variation}` : ""}`,
+    {
+      "is-deep": isDeep,
+    },
+  ]}
+>
+  <div class="l-main">
+    <div class="row">
+      <slot />
+    </div>
+  </div>
+</section>
