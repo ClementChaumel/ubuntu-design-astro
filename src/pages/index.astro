@@ -1,16 +1,15 @@
 ---
 import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
 import Separator from "../components/Separator.astro";
 import Strip from "../components/Strip.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Ubuntu Design">
-  <Strip variation="accent" isDeep>
-    <div class="col-6 col-medium-2">
-      <h1>Welcome to <br /> Canonical Design</h1>
-    </div>
-  </Strip>
+  <Hero>
+    <h1>Welcome to <br /> Canonical Design</h1>
+  </Hero>
 
   <Strip isDeep>
     <div class="col-6 col-medium-2">

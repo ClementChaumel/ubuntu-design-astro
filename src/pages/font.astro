@@ -1,34 +1,30 @@
 ---
 import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
 import FontTester from "../components/FontTester.astro";
 import Strip from "../components/Strip.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Ubuntu font">
-  <Strip variation="accent" isDeep>
-    <div class="col-4 col-medium-2">
-      <h1 class="p-heading--2">Ubuntu font</h1>
-    </div>
-    <div class="col-6 col-medium-4">
-      <p>
-        The way typography is used says as much about our brand as the words
-        themselves.
-      </p>
-      <p>
-        The Ubuntu typeface has been specially created to complement the Ubuntu
-        tone of voice. It has a contemporary style and contains characteristics
-        unique to the Ubuntu brand that convey a precise, reliable and free
-        attitude.
-      </p>
-    </div>
-  </Strip>
+  <Hero title="Ubuntu font">
+    <p>
+      The way typography is used says as much about our brand as the words
+      themselves.
+    </p>
+    <p>
+      The Ubuntu typeface has been specially created to complement the Ubuntu
+      tone of voice. It has a contemporary style and contains characteristics
+      unique to the Ubuntu brand that convey a precise, reliable and free
+      attitude.
+    </p>
+  </Hero>
   <Strip variation="light" isDeep>
     <div class="col-4 col-medium-2">
       <h2>Font Variants</h2>
       <p>
         We use the Ubuntu font family by default, but you can specify any other
-        font family to better suit your project.
+        font family to better suit your project.D
       </p>
     </div>
     <div class="col-8 col-medium-4">
@@ -189,7 +185,8 @@ import Layout from "../layouts/Layout.astro";
           <p>
             <a
               href="https://assets.ubuntu.com/v1/0f5898c1-ubuntu-font-family-sources_0.83.orig.tar.gz"
-              >Download the Ubuntu Font Family source code</a>
+              >Download the Ubuntu Font Family source code</a
+            >
           </p> (For font designers with a copy of Font Lab Studio, 8.4MB)
         </li>
         <li class="p-list__item">
@@ -200,13 +197,15 @@ import Layout from "../layouts/Layout.astro";
         </li>
         <li class="p-list__item">
           <a href="http://wiki.ubuntu.com/Ubuntu_Font_Family"
-            >Wiki documentation</a>
+            >Wiki documentation</a
+          >
         </li>
       </ul>
       <p>
         <a
           href="https://assets.ubuntu.com/v1/0cef8205-ubuntu-font-family-0.83.zip"
-          class="p-button--positive">Download for free</a>
+          class="p-button--positive">Download for free</a
+        >
       </p>
     </div>
   </Strip>

@@ -1,0 +1,26 @@
+---
+import Strip from "./Strip.astro";
+
+export interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Strip variation="accent" isDeep>
+  {
+    title ? (
+      <>
+        <div class="col-4 col-medium-2">
+          <h1 class="p-heading--2">{title}</h1>
+        </div>
+        <div class="col-6 col-medium-4">
+          <slot />
+        </div>
+      </>
+    ) : (
+      <slot />
+    )
+  }
+</Strip>
