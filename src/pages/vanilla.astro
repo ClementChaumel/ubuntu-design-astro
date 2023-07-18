@@ -3,7 +3,7 @@ import Hero from "../components/Hero.astro";
 import Strip from "../components/Strip.astro";
 import Separator from "../components/Separator.astro";
 import Layout from "../layouts/Layout.astro";
-import ContentSection from "../components/ContentSection.astro";
+import SplitContent from "../components/SplitContent.astro";
 ---
 
 <Layout title="Ubuntu font">
@@ -83,7 +83,8 @@ import ContentSection from "../components/ContentSection.astro";
     </div>
   </Strip>
   <Strip>
-    <ContentSection title="Documentation">
+    <SplitContent>
+      <h2 slot="small">Documentation</h2>
       <p>
         Vanilla framework documentation contains everything you need to know to
         download, install and use it in your projects.
@@ -95,11 +96,12 @@ import ContentSection from "../components/ContentSection.astro";
       <a href="https://vanillaframework.io/docs"
         >Read Vanilla framework documentation</a
       >
-    </ContentSection>
+    </SplitContent>
   </Strip>
   <Separator />
   <Strip>
-    <ContentSection title="Source code">
+    <SplitContent>
+      <h2 slot="small">Source code</h2>
       <p>
         Anyone can contribute to Vanilla, improve it and extend it. All the code
         is available on GitHub and is licensed under LGPLv3 by Canonical.
@@ -123,11 +125,12 @@ import ContentSection from "../components/ContentSection.astro";
           >
         </li>
       </ul>
-    </ContentSection>
+    </SplitContent>
   </Strip>
   <Separator />
   <Strip>
-    <ContentSection title="Design">
+    <SplitContent>
+      <h2 slot="small">Design</h2>
       <p>
         Anyone can contribute to Vanilla, improve it and extend it. All the code
         is available on GitHub and is licensed under LGPLv3 by Canonical.
@@ -151,6 +154,6 @@ import ContentSection from "../components/ContentSection.astro";
           >
         </li>
       </ul>
-    </ContentSection>
+    </SplitContent>
   </Strip>
 </Layout>

@@ -4,6 +4,7 @@ import Hero from "../components/Hero.astro";
 import FontTester from "../components/FontTester.astro";
 import Strip from "../components/Strip.astro";
 import Layout from "../layouts/Layout.astro";
+import SplitContent from "../components/SplitContent.astro";
 ---
 
 <Layout title="Ubuntu font">
@@ -20,14 +21,12 @@ import Layout from "../layouts/Layout.astro";
     </p>
   </Hero>
   <Strip variation="light" isDeep>
-    <div class="col-4 col-medium-2">
-      <h2>Font Variants</h2>
-      <p>
+    <SplitContent>
+      <h2 slot="small">Font Variants</h2>
+      <p slot="small">
         We use the Ubuntu font family by default, but you can specify any other
         font family to better suit your project.D
       </p>
-    </div>
-    <div class="col-8 col-medium-4">
       <div class="row u-equal-height">
         <Card title="Ubuntu" extraClasses="col-4">
           <p>
@@ -42,7 +41,7 @@ import Layout from "../layouts/Layout.astro";
           </p>
         </Card>
       </div>
-    </div>
+    </SplitContent>
   </Strip>
   <Strip isDeep>
     <FontTester />
