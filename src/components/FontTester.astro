@@ -92,11 +92,12 @@
   const sliders = document.querySelectorAll("input");
 
   const updateFontVariations = () => {
-    const weight = (<HTMLInputElement>document.querySelector("#weight"))?.value;
+    const weight = (document.querySelector("#weight") as HTMLInputElement)
+      ?.value;
     const size = Number(
-      (<HTMLInputElement>document.querySelector("#size"))?.value
+      (document.querySelector("#size") as HTMLInputElement)?.value
     );
-    const font = <HTMLTextAreaElement>document.querySelector("#font-tester");
+    const font = document.querySelector("#font-tester") as HTMLTextAreaElement;
     const size_tag = document.querySelector("#size_tag");
     const weight_tag = document.querySelector("#weight_tag");
 

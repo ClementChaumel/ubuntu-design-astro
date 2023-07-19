@@ -1,0 +1,128 @@
+---
+import Hero from "../components/Hero.astro";
+import Strip from "../components/Strip.astro";
+import Layout from "../layouts/Layout.astro";
+import SplitContent from "../components/SplitContent.astro";
+import IconSet from "../components/IconSet.astro";
+import LogosSection from "../components/LogosSection.astro";
+---
+
+<Layout title="Ubuntu font">
+  <Hero title="Design resources">
+    <p>
+      On this page you will find everything you need to design and build with
+      our design system, including our Figma component library, our icon library
+      and the Ubuntu font.
+    </p>
+  </Hero>
+  <Strip variation="light" isDeep>
+    <SplitContent>
+      <h2 slot="small">Design system library</h2>
+      <p>
+        In this Figma library you will find our most up-to-date responsive
+        components to build your designs.
+      </p>
+      <p>
+        <a
+          href="https://www.figma.com/file/H6MSsN3taoXXOJCPUbIImQ/Design-System-Library?node-id=803%3A9310&t=W0OglotYBvqZyM1e-1"
+        >
+          View our Figma library
+        </a>
+      </p>
+    </SplitContent>
+  </Strip>
+  <Strip isDeep>
+    <h2>Brand resources</h2>
+    <hr />
+    <SplitContent>
+      <h3 class="p-heading--5" slot="small">Ubuntu typefaces</h3>
+      <div class="row">
+        <div class="col-4 u-hide--medium u-hide--small">
+          <div class="resources__content-thumb typeface">
+            <img
+              src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_290,h_129/https://assets.ubuntu.com/v1/bfe86ea2-ssh_.png"
+              srcset="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_580,h_258/https://assets.ubuntu.com/v1/bfe86ea2-ssh_.png 2x"
+              alt="ssh_ written with Ubuntu typeface"
+              width="290"
+              height="129"
+            />
+          </div>
+        </div>
+        <div class="col-4 col-medium-4">
+          <p>
+            The Ubuntu font has contemporary style that conveys a precise,
+            reliable and free attitude.
+          </p>
+          <ul class="p-list--divided">
+            <li class="p-list__item">
+              <a
+                href="https://assets.ubuntu.com/v1/0cef8205-ubuntu-font-family-0.83.zip"
+                >Download the Ubuntu Font Family</a
+              > (2.2MB)
+            </li>
+            <li class="p-list__item">
+              <a
+                href="https://assets.ubuntu.com/v1/0f5898c1-ubuntu-font-family-sources_0.83.orig.tar.gz"
+                >Download the Ubuntu Font Family source code</a
+              > (8.4MB)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </SplitContent>
+    <hr />
+    <SplitContent>
+      <h3 class="p-heading--5" slot="small">Icon set</h3>
+      <div class="row">
+        <div class="col-4 u-hide--medium u-hide--small">
+          <IconSet />
+        </div>
+        <div class="col-4 col-medium-4">
+          <p>
+            Our icon library includes our generic UI iconography as well as some
+            bespoke concepts.
+          </p>
+          <p>
+            <a href="https://vanillaframework.io/docs/patterns/icons"
+              >Use the icons in Vanilla</a
+            >
+          </p>
+        </div>
+      </div>
+    </SplitContent>
+    <hr />
+    <SplitContent>
+      <h3 class="p-heading--5" slot="small">Slide template</h3>
+      <div class="row">
+        <div class="col-4 u-hide--medium u-hide--small">
+          <img
+            src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_390,h_220/https://assets.ubuntu.com/v1/59e3bb07-Slide_template.png"
+            srcset="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_780,h_440/https://assets.ubuntu.com/v1/59e3bb07-Slide_template.png 2x"
+            alt=""
+            width="390"
+            height="220"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-4 col-medium-4">
+          <p>
+            Use this template to create presentations with the Canonical
+            branding style.
+          </p>
+          <p>
+            <a href="https://docs.google.com/presentation/u/0/?tgif=d&ftv=1"
+              >Use the slide template (internal)</a
+            >
+          </p>
+        </div>
+      </div>
+    </SplitContent>
+    <hr />
+    <SplitContent>
+      <h3 class="p-heading--5" slot="small">Logos</h3>
+      <div class="col-8 col-medium-4 u-sv3 resources__content-thumb logo_thumb">
+        <LogosSection />
+      </div>
+    </SplitContent>
+  </Strip>
+</Layout>
