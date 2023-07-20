@@ -1,5 +1,4 @@
 ---
-import SplitContent from "./SplitContent.astro";
 import Strip from "./Strip.astro";
 
 export interface Props {
@@ -9,17 +8,13 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<Strip variation="accent" isDeep>
+<Strip variation="accent" isDeep isSplitContent={!!title}>
   {
     title ? (
-      <>
-        <SplitContent>          
-          <h1 class="p-heading--2" slot="small">{title}</h1>
-          <slot />
-        <SplitContent />
-      </>
-    ) : (
-      <slot />
-    )
+      <h1 class="p-heading--2" slot="small">
+        {title}
+      </h1>
+    ) : null
   }
+  <slot />
 </Strip>

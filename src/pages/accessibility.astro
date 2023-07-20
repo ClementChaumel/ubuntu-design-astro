@@ -3,7 +3,6 @@ import Hero from "../components/Hero.astro";
 import Strip from "../components/Strip.astro";
 import Separator from "../components/Separator.astro";
 import Layout from "../layouts/Layout.astro";
-import SplitContent from "../components/SplitContent.astro";
 ---
 
 <Layout title="Ubuntu font">
@@ -15,48 +14,45 @@ import SplitContent from "../components/SplitContent.astro";
       </a>
     </p>
   </Hero>
-  <Strip variation="light">
-    <SplitContent>
-      <h2 slot="small">Ensuring conformance</h2>
-      <p slot="small">
-        We use the following tools to continually audit the framework:
-      </p>
-      <p class="p-heading--5 u-no-margin--bottom">
-        <a href="https://www.w3.org/WAI/eval/report-tool/#!/evaluation/audit">
-          Accessibility report tool
+  <Strip variation="light" isSplitContent>
+    <h2 slot="small">Ensuring conformance</h2>
+    <p slot="small">
+      We use the following tools to continually audit the framework:
+    </p>
+    <p class="p-heading--5 u-no-margin--bottom">
+      <a href="https://www.w3.org/WAI/eval/report-tool/#!/evaluation/audit">
+        Accessibility report tool
+      </a>
+    </p>
+    <p>
+      A checklist that can be filtered by A / AA / AAA level, with a short
+      description and links to the related "Understanding" and "How to Meet"
+      articles that accompany each criterion.
+    </p>
+    <p class="p-heading--5 u-no-margin--bottom">
+      <a href="https://www.w3.org/TR/wai-aria-practices">
+        WAI-ARIA Authoring Practices 1.1
+      </a>
+    </p>
+    <p>
+      <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> A guide
+      for understanding how to use <cite>
+        <a href="https://www.w3.org/TR/wai-aria-1.1/">
+          <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
+          1.1
         </a>
-      </p>
-      <p>
-        A checklist that can be filtered by A / AA / AAA level, with a short
-        description and links to the related "Understanding" and "How to Meet"
-        articles that accompany each criterion.
-      </p>
-      <p class="p-heading--5 u-no-margin--bottom">
-        <a href="https://www.w3.org/TR/wai-aria-practices">
-          WAI-ARIA Authoring Practices 1.1
-        </a>
-      </p>
-      <p>
-        <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> A guide
-        for understanding how to use <cite>
-          <a href="https://www.w3.org/TR/wai-aria-1.1/">
-            <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
-            1.1
-          </a>
-        </cite>
-        to create an accessible Rich Internet Application. It provides guidance on
-        the appropriate application of{" "}
-        <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>,
-        describes recommended{" "}
-        <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> usage
-        patterns, and explains concepts behind them.
-      </p>
-      <p class="p-heading--5 u-no-margin--bottom">
-        <a href="https://validator.w3.org/nu/"
-          >The W3 Markup Validation Service</a
-        >
-      </p>
-    </SplitContent>
+      </cite>
+      to create an accessible Rich Internet Application. It provides guidance on
+      the appropriate application of{" "}
+      <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>,
+      describes recommended{" "}
+      <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> usage patterns,
+      and explains concepts behind them.
+    </p>
+    <p class="p-heading--5 u-no-margin--bottom">
+      <a href="https://validator.w3.org/nu/">The W3 Markup Validation Service</a
+      >
+    </p>
   </Strip>
   <Strip>
     <div class="col-6 p-section">
@@ -175,35 +171,37 @@ import SplitContent from "../components/SplitContent.astro";
     </ul>
   </Strip>
   <Separator />
-  <Strip>
-    <SplitContent>
-      <h2 slot="small">Useful tools</h2>
-      <p slot="small">
-        The web is abundant in tools that help to create and test for accessible
-        sites. We find the following particularly useful:
-      </p>
-      <ul class="p-list--divided">
-        <li class="p-list__item">
-          <a
-            href="https://developer.chrome.com/docs/devtools/accessibility/reference/"
-            >Chrome Accessibility Developer Tools</a>
-        </li>
-        <li class="p-list__item">
-          <a href="https://webaim.org/resources/contrastchecker/"
-            >Contrast checker tool</a>
-        </li>
-        <li class="p-list__item">
-          <a href="http://www.chromevox.com/"
-            >ChromeVox: a screen reader for Chrome</a>
-        </li>
-        <li class="p-list__item">
-          <a href="https://the-pastry-box-project.net/anne-gibson/2014-july-31"
-            >Accessibility Alphabet</a>
-        </li>
-        <li class="p-list__item">
-          <a href="https://webaim.org/">Web Accessibility in Mind</a>
-        </li>
-      </ul>
-    </SplitContent>
+  <Strip isSplitContent>
+    <h2 slot="small">Useful tools</h2>
+    <p slot="small">
+      The web is abundant in tools that help to create and test for accessible
+      sites. We find the following particularly useful:
+    </p>
+    <ul class="p-list--divided">
+      <li class="p-list__item">
+        <a
+          href="https://developer.chrome.com/docs/devtools/accessibility/reference/"
+          >Chrome Accessibility Developer Tools</a
+        >
+      </li>
+      <li class="p-list__item">
+        <a href="https://webaim.org/resources/contrastchecker/"
+          >Contrast checker tool</a
+        >
+      </li>
+      <li class="p-list__item">
+        <a href="http://www.chromevox.com/"
+          >ChromeVox: a screen reader for Chrome</a
+        >
+      </li>
+      <li class="p-list__item">
+        <a href="https://the-pastry-box-project.net/anne-gibson/2014-july-31"
+          >Accessibility Alphabet</a
+        >
+      </li>
+      <li class="p-list__item">
+        <a href="https://webaim.org/">Web Accessibility in Mind</a>
+      </li>
+    </ul>
   </Strip>
 </Layout>

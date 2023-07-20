@@ -1,11 +1,13 @@
 ---
+import SplitContent from "./SplitContent.astro";
 export interface Props {
   variation?: "light" | "accent";
   isDeep?: boolean;
   isBordered?: boolean;
+  isSplitContent?: boolean;
 }
 
-const { variation, isDeep, isBordered } = Astro.props;
+const { variation, isDeep, isBordered, isSplitContent } = Astro.props;
 ---
 
 <section
@@ -19,8 +21,17 @@ const { variation, isDeep, isBordered } = Astro.props;
   ]}
 >
   <div class="l-main">
-    <div class="row">
-      <slot />
-    </div>
+    {
+      isSplitContent ? (
+        <SplitContent>
+          <slot slot="small" name="small" />
+          <slot />
+        </SplitContent>
+      ) : (
+        <div class="row">
+          <slot />
+        </div>
+      )
+    }
   </div>
 </section>

@@ -3,8 +3,8 @@ import Hero from "../components/Hero.astro";
 import Strip from "../components/Strip.astro";
 import Layout from "../layouts/Layout.astro";
 import SplitContent from "../components/SplitContent.astro";
-import IconSet from "../components/IconSet.astro";
-import LogosSection from "../components/LogosSection.astro";
+import IconSet from "../components/resources/IconSet.astro";
+import LogosSection from "../components/resources/LogosSection.astro";
 ---
 
 <Layout title="Ubuntu font">
@@ -15,21 +15,19 @@ import LogosSection from "../components/LogosSection.astro";
       and the Ubuntu font.
     </p>
   </Hero>
-  <Strip variation="light" isDeep>
-    <SplitContent>
-      <h2 slot="small">Design system library</h2>
-      <p>
-        In this Figma library you will find our most up-to-date responsive
-        components to build your designs.
-      </p>
-      <p>
-        <a
-          href="https://www.figma.com/file/H6MSsN3taoXXOJCPUbIImQ/Design-System-Library?node-id=803%3A9310&t=W0OglotYBvqZyM1e-1"
-        >
-          View our Figma library
-        </a>
-      </p>
-    </SplitContent>
+  <Strip variation="light" isDeep isSplitContent>
+    <h2 slot="small">Design system library</h2>
+    <p>
+      In this Figma library you will find our most up-to-date responsive
+      components to build your designs.
+    </p>
+    <p>
+      <a
+        href="https://www.figma.com/file/H6MSsN3taoXXOJCPUbIImQ/Design-System-Library?node-id=803%3A9310&t=W0OglotYBvqZyM1e-1"
+      >
+        View our Figma library
+      </a>
+    </p>
   </Strip>
   <Strip isDeep>
     <h2>Brand resources</h2>
