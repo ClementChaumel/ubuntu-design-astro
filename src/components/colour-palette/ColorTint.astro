@@ -10,13 +10,14 @@ const percentages = [100, 90, 80, 70, 60, 50, 45, 40, 35, 30, 25, 20, 15, 10];
 ---
 
 <div class="col-6" style={`background-color: ${tints[0]}`}>
-  <h4
+  <p
+    class="p-heading--4"
     style={`background-color: ${tints[0]}; color: ${
       nbOfWhiteLabels >= 1 ? "white" : "inherit"
     }`}
   >
     {name}
-  </h4>
+  </p>
   <ul class="p-list">
     {
       percentages.map((percentage, index) => (
@@ -38,9 +39,9 @@ const percentages = [100, 90, 80, 70, 60, 50, 45, 40, 35, 30, 25, 20, 15, 10];
     margin-bottom: 2rem;
   }
 
-  h4 {
+  .p-heading--4 {
     padding: 0.5rem 1rem 1rem 1rem !important;
-    margin: 0;
+    margin: 0 !important;
   }
 
   ul {

@@ -46,27 +46,28 @@
     style="appearance: auto"
   />
 </div>
-<textarea
-  id="font-tester"
-  class="font-tester__demo js-font-demo"
-  data-family="ubuntu"
-  data-style="normal"
-  data-color="black"
->
-  Type your text here{"\n"}
-
-  Latin sample:{"\n"} Lorem ipsum dolor sit amet, quo tacimates dissentiet no at.{
-    "\n"
-  }
-  Cyrillic sample:{"\n"} Лорем ипсум долор сит амет, видит елигенди перпетуа усу
-  еу.{"\n"}
-  Greek sample:{"\n"} Λορεμ ιπσθμ δολορ σιτ αμετ, μεα νατθμ ηαβεμθσ νο σιτ.
-</textarea>
+<div>
+  <label for="font-tester">Type your text here:</label>
+  <textarea
+    id="font-tester"
+    class="font-tester__demo js-font-demo"
+    data-family="ubuntu"
+    data-style="normal"
+    data-color="black"
+  >
+    Latin sample:{"\n"} Lorem ipsum dolor sit amet, quo tacimates dissentiet no at.{
+      "\n"
+    }
+    Cyrillic sample:{"\n"} Лорем ипсум долор сит амет, видит елигенди перпетуа усу
+    еу.{"\n"}
+    Greek sample:{"\n"} Λορεμ ιπσθμ δολορ σιτ αμετ, μεα νατθμ ηαβεμθσ νο σιτ.
+  </textarea>
+</div>
 
 <style lang="scss">
   #font-tester {
     height: 300px;
-    margin: 2rem 0;
+    margin: 0 0 2rem 0;
     overflow-y: auto;
     width: 100%;
 
