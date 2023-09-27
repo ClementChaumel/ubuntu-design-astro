@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/prefetch": "^0.3.0",
+    "@astrojs/prefetch": "^0.4.0",
     "@canonical/cookie-policy": "^3.4.0",
     "@canonical/global-nav": "^3.2.4",
-    "astro": "^2.5.6",
+    "astro": "^3.1.4",
     "sass": "^1.62.1",
     "vanilla-framework": "^3.14.0"
   }
