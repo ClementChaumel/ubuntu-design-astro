@@ -42,22 +42,23 @@ const { title } = Astro.props;
     <meta name="author" content="Canonical" />
     <ViewTransitions />
   </head>
-  <body>
+  <body transition:animate="none">
     <Navigation />
     <slot />
     <Footer />
-  </body><style lang="scss" is:global>
-    // Import the framework
-    @import "node_modules/vanilla-framework";
+    <style lang="scss" is:global>
+      // Import the framework
+      @import "node_modules/vanilla-framework";
 
-    // Include all of Vanilla Framework
-    @include vanilla;
-  </style>
+      // Include all of Vanilla Framework
+      @include vanilla;
+    </style>
 
-  <script>
-    import { cookiePolicy } from "@canonical/cookie-policy";
+    <script>
+      import { cookiePolicy } from "@canonical/cookie-policy";
 
-    // Initialise the cookie policy
-    cookiePolicy();
-  </script>
+      // Initialise the cookie policy
+      cookiePolicy();
+    </script>
+  </body>
 </html>
